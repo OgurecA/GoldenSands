@@ -8,6 +8,7 @@ import LoanSection from "@/components/dubai/LoanSection";
 import LogoMarquee from "@/components/dubai/LogoMarquee";
 import CallToAction from "@/components/dubai/CallToAction";
 import Footer from "@/components/dubai/Footer";
+import CookieConsent from "@/components/dubai/CookieConsent";
 
 export default function DubaiHome() {
   return (
@@ -38,6 +39,7 @@ export default function DubaiHome() {
       </main>
       
       <Footer />
+      <CookieConsent />
     </>
   );
 }
