@@ -18,13 +18,13 @@ export default function CookieConsent() {
     }
   }, []);
 
-  const acceptCookies = () => {
-    localStorage.setItem('cookieConsent', 'accepted');
+  const acceptAllCookies = () => {
+    localStorage.setItem('cookieConsent', 'all');
     setVisible(false);
   };
   
-  const declineCookies = () => {
-    localStorage.setItem('cookieConsent', 'declined');
+  const acceptNecessaryCookies = () => {
+    localStorage.setItem('cookieConsent', 'necessary');
     setVisible(false);
   };
 
@@ -32,23 +32,22 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 bg-[#4A2500]/90 text-white py-3 px-4 flex flex-col sm:flex-row justify-between items-center z-50 text-sm">
-      <p className="mr-4 mb-2 sm:mb-0">
+      <p className="mr-4 mb-3 sm:mb-0">
         {t('cookie', 'message')}
       </p>
       <div className="flex gap-2">
         <Button 
-          onClick={declineCookies}
+          onClick={acceptNecessaryCookies}
           variant="outline" 
-          className="bg-transparent border-white text-white hover:bg-white/20 hover:text-white transition-colors"
+          className="bg-transparent border-white text-white hover:bg-white/20 hover:text-white transition-colors whitespace-nowrap"
         >
-          {t('cookie', 'decline')}
+          {t('cookie', 'acceptNecessary')}
         </Button>
         <Button 
-          onClick={acceptCookies}
-          variant="outline" 
-          className="bg-transparent border-white text-white hover:bg-white hover:text-[#4A2500] transition-colors"
+          onClick={acceptAllCookies} 
+          className="bg-[#E5B168] border-[#E5B168] text-[#4A2500] hover:bg-[#F6C57A] hover:border-[#F6C57A] hover:text-[#4A2500] transition-colors whitespace-nowrap"
         >
-          {t('cookie', 'accept')}
+          {t('cookie', 'acceptAll')}
         </Button>
       </div>
     </div>

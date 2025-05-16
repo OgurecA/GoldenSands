@@ -20,13 +20,13 @@ const translations: Translations = {
       eng: 'This website uses cookies to ensure you get the best experience on our website.',
       rus: 'Этот сайт использует файлы cookie для обеспечения наилучшего опыта на нашем сайте.'
     },
-    accept: {
-      eng: 'Accept',
-      rus: 'Принять'
+    acceptNecessary: {
+      eng: 'Accept only necessary',
+      rus: 'Принять необходимые'
     },
-    decline: {
-      eng: 'Decline',
-      rus: 'Отклонить'
+    acceptAll: {
+      eng: 'Accept all',
+      rus: 'Принять все'
     }
   },
   header: {
