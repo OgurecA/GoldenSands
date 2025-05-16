@@ -15,6 +15,16 @@ type Translations = {
 
 // Создаем словарь с переводами
 const translations: Translations = {
+  cookie: {
+    message: {
+      eng: 'This website uses cookies to ensure you get the best experience on our website.',
+      rus: 'Этот сайт использует файлы cookie для обеспечения наилучшего опыта на нашем сайте.'
+    },
+    accept: {
+      eng: 'Accept',
+      rus: 'Принять'
+    }
+  },
   header: {
     title: {
       eng: 'Dubai Living',
