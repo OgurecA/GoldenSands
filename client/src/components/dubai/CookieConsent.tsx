@@ -22,21 +22,35 @@ export default function CookieConsent() {
     localStorage.setItem('cookieConsent', 'accepted');
     setVisible(false);
   };
+  
+  const declineCookies = () => {
+    localStorage.setItem('cookieConsent', 'declined');
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#4A2500]/90 text-white py-2 px-4 flex justify-between items-center z-50 text-sm">
-      <p className="mr-4">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#4A2500]/90 text-white py-3 px-4 flex flex-col sm:flex-row justify-between items-center z-50 text-sm">
+      <p className="mr-4 mb-2 sm:mb-0">
         {t('cookie', 'message')}
       </p>
-      <Button 
-        onClick={acceptCookies}
-        variant="outline" 
-        className="bg-transparent border-white text-white hover:bg-white hover:text-[#4A2500] transition-colors"
-      >
-        {t('cookie', 'accept')}
-      </Button>
+      <div className="flex gap-2">
+        <Button 
+          onClick={declineCookies}
+          variant="outline" 
+          className="bg-transparent border-white text-white hover:bg-white/20 hover:text-white transition-colors"
+        >
+          {t('cookie', 'decline')}
+        </Button>
+        <Button 
+          onClick={acceptCookies}
+          variant="outline" 
+          className="bg-transparent border-white text-white hover:bg-white hover:text-[#4A2500] transition-colors"
+        >
+          {t('cookie', 'accept')}
+        </Button>
+      </div>
     </div>
   );
 }

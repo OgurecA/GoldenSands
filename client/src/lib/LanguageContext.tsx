@@ -23,6 +23,10 @@ const translations: Translations = {
     accept: {
       eng: 'Accept',
       rus: 'Принять'
+    },
+    decline: {
+      eng: 'Decline',
+      rus: 'Отклонить'
     }
   },
   header: {
