@@ -2,29 +2,43 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Cookiebot -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
+      data-cbid="b1f02df-f085-40f9-9fb5-c23d6e0d0a2a"
+      type="text/javascript" async>
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="Профессиональные бизнес-решения для вашей компании. Консалтинг, разработка, маркетинг и финансовые услуги. Свяжитесь с нами для роста вашего бизнеса." />
-    <meta property="og:title" content="CompanyName - Профессиональные бизнес-решения" />
+    <meta name="description" content="Профессиональная помощь в Дубае. Виза, банковский счет, создание компании услуги. Свяжитесь с нами для комфортного перемещения в Дубаи." />
+    <meta property="og:title" content="GoldenSands - Профессиональная помощь в Дубае" />
     <meta property="og:description" content="Мы помогаем компаниям расти и развиваться, предоставляя качественные услуги и индивидуальный подход к каждому клиенту." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://companyname.com" />
     <meta property="og:image" content="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" />
     <title>GoldenSands - Профессиональная помощь в Дубае</title>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9WZVWE8J5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B9WZVWE8J5');
-</script>
+    <!-- Google tag (gtag.js) with Consent Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9WZVWE8J5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      // GDPR-compliant default: denied until user accepts
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied'
+      });
+
+      // Init GA, but will only activate after consent
+      gtag('js', new Date());
+      gtag('config', 'G-B9WZVWE8J5');
+    </script>
 
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   </body>
 </html>
